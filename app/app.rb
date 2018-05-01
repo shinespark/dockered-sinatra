@@ -1,5 +1,8 @@
 require 'sinatra'
 require 'sinatra/reloader'
+require 'bootstrap'
+require 'hamlit'
+require 'sass'
 
 set :bind, '0.0.0.0'
 set :environment, :production
@@ -9,5 +12,5 @@ configure :production do
 end
 
 get '/' do
-  'Put this in your pipe & smoke it!'
+  haml :index
 end

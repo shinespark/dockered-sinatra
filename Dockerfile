@@ -9,9 +9,9 @@ WORKDIR /app
 RUN apk --update add $RUNTIME_PACKAGES
 RUN gem install bundler --no-document
 
-COPY Gemfile Gemfile
-COPY Gemfile.lock Gemfile.lock
-
 COPY app /app
+
+# RUN bundle install --path vendor/bundle
+# CMD ["bundle", "exec", "rackup", "-p", "4567"]
 RUN bundle install
-CMD ["ruby", "/app/app.rb"]
+CMD ["ruby", "app.rb"]
