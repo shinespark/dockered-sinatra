@@ -7,6 +7,7 @@ git_source(:github) { |repo_name| "https://github.com/#{repo_name}" }
 gem 'bootstrap', '~> 4.1.1'
 gem 'hamlit'
 gem 'sinatra'
+gem 'sinatra-contrib'
 
 group :development do
   gem 'rubocop'
