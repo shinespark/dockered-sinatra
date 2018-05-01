@@ -4,10 +4,16 @@
     %meta{ charset: 'utf-8' }
     %meta{ name: 'viewport', content: 'width=device-width, initial-scale=1, shrink-to-fit=no' }
     %title
+    %link{ rel: 'stylesheet', type: 'text/css', href: "{% static 'font-awesome/css/font-awesome.min.css' %}" }
+    %link{ rel: 'stylesheet', type: 'text/css', href: "{% static 'bootstrap/dist/css/bootstrap.min.css' %}" }
+    %link{ rel: 'stylesheet', type: 'text/css', href: "{% sass_src 'stylesheets/style.sass' %}" }
     %meta{ name: 'theme-color', content: '#ffffff' }
-    %meta{ name: 'robots', content: 'noindex, nofollow' }
 
   %body
 
     .main.container-fluid
       = yield
+      
+    %script{ src: "{% static 'jquery/dist/jquery.min.js' %}" }
+    %script{ src: "{% static 'popper.js/dist/umd/popper.min.js' %}" }
+    %script{ src: "{% static 'bootstrap/dist/js/bootstrap.min.js' %}" }
