@@ -6,7 +6,7 @@ require 'sass'
 
 set :bind, '0.0.0.0'
 set :environment, :production
-set :haml, format: 'html5'
+set :haml, { escape_html: false }
 
 configure :production do
   enable :reloader
